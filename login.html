@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<title>Daftar Hadir Siswa SMKN 2 Pati</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="esl-games/scripts/game-jumbled2.css" />
+<link rel="stylesheet" href="w3schools/w3css/4/w3.css">
+<link rel="stylesheet" href="ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="image/logo smkn 2 pati icon.png" type="image/png" sizes="16x16">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<style>
+html,body,h1 {font-family: "Cooper Black" , serif;}
+html,body,h2,h3,h4,h5,h6{font-family: 'Indie Flower', cursive, serif;}
+iframe {width: 100%;height: 600px;border: 2px w3-grey;}
+</style>
+</head>
+<body onload="show('#login')">
+<div class="w3-top w3-dark-gray" style="padding-left:80px">
+<h2>Login</h2>
+</div>
+</audio>
+</div>
+<div id='sidebar' style="padding-top:65px">
+<div class="w3-sidebar w3-bar-block w3-green w3-xxlarge" style="width:80px">
+  <a href="login.html" class="w3-bar-item w3-button w3-hover-aqua" onclick="show('#login')"><h5>Login</h5></a--> 
+  <a href="presensi.html" class="w3-bar-item w3-button w3-hover-aqua" onclick="show('#presensi')"><h5>Presen si</h5></a--> 
+  <a href="attendance.html" class="w3-bar-item w3-button w3-hover-aqua" onclick="show('#attendance')"><h5>Kehadir an</h5></a> 
+</div>
+</div>
+<div id='loginDiv'>
+<div id="loginModal" class="w3-animate-zoom w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-green"> 
+        <span onclick="document.getElementById('loginModal').style.display='none'"
+        class="w3-button w3-xlarge w3-display-topright">&times;</span>
+        <h3>Status Presensi</h3>
+      </header>
+	  <div class="w3-panel" id="login_panel">
+  <p class="w3-center" id="loginOffline_"></p>
+  <p class="w3-center" id="loginOnline_"></p>
+   <p class="w3-center" id="loginOnlineStatus_"></p> 
+</div>
+	</div>
+</div>	
+<div id="loginModalLogout" class="w3-animate-zoom w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-red"> 
+        <span onclick="document.getElementById('loginModalLogout').style.display='none'"
+        class="w3-button w3-xlarge w3-display-topright">&times;</span>
+        <h3>Status Presensi</h3>
+      </header>
+	  <div class="w3-panel" id="login_panel">
+      <p>Anda telah log out!</p>
+</div>
+	</div>
+</div>	
+<div id='login' class="w3-container w3-animate-left" style="padding-left:85px">
+  <h2 class="w3-animate-left">Login</h2>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+img.avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+<form class="w3-form" action="">
+  <div class="imgcontainer">
+    <img src="image/logo smkn 2 pati fix.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="w3-container">
+    <label class="w3-label" for="username"><b>NIS</b></label>
+    <input class="w3-input" type="text" placeholder="Enter Username" name="username" id="username" required>
+
+    <label class="w3-label" for="password"><b>Password</b></label>
+    <input class="w3-input" type="password" placeholder="Enter Password" name="password" id="password" r>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="password">Klik link berikut jika lupa NIS <a href="https://bit.ly/CariNIS2020" target="_blank">https://bit.ly/CariNIS2020</a></span>
+  </div>
+</form>
+<div class="w3-panel w3-yellow" id="login_panel"style="background-color:#f1f1f1">
+  <p class="w3-center" id="loginOffline"></p>
+  <script>
+   function loginOffline(usernameStored,elShown){
+   document.getElementById(elShown).innerHTML='NIS Anda (tersimpan): '+usernameStored;
+   }	
+  
+  var usernameStored=localStorage.getItem('usernameStored');
+  var passwordStored=localStorage.getItem('passwordStored');
+  loginOffline(usernameStored,'loginOffline');
+  
+  function loginOnline(usernameStored,passwordStored,elShown){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	  var obj=JSON.parse(this.responseText).result;	
+	  passwordOnline(usernameStored,passwordStored);
+	  if(toString(obj)==toString(usernameStored) && parseInt(localStorage.getItem('passwordOnline'))==1)
+	  { localStorage.setItem('loginOnline',1);
+        document.getElementById(elShown).innerHTML='NIS Anda (online): '+localStorage.getItem('usernameStored'); 
+	  }
+    }
+	else {localStorage.setItem('loginOnline',0);}
+  };
+  var inputUrlSpreadSheet='https://docs.google.com/spreadsheets/d/1o2s74UZ59Naw17Yv8RxSaGx7K3Q9Tb6JnZcMdx8r4A8/edit?usp=sharing';
+  var inputNamaSheet='login';
+  var action='getItem';
+  var nis=usernameStored;
+  var noKolom=0;
+  var req="https://script.google.com/macros/s/AKfycbyWlP-nviRkp2BMk7Yydfb_CeK-uh5sGJB0vR60WflSYHt1PUfg/exec?inputUrlSpreadSheet=" +
+            inputUrlSpreadSheet+"&inputNamaSheet="+inputNamaSheet+"&action="+action+"&nis="+usernameStored+"+&noKolom="+noKolom;
+  xhttp.open("GET", req, true);
+  xhttp.send();
+  }  
+  function loginOnlineStatus(usernameStored,passwordStored,elShown){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	  var obj=JSON.parse(this.responseText).result;	
+      document.getElementById(elShown).innerHTML=obj;
+    }
+  };
+  var inputUrlSpreadSheet='https://docs.google.com/spreadsheets/d/1o2s74UZ59Naw17Yv8RxSaGx7K3Q9Tb6JnZcMdx8r4A8/edit?usp=sharing';
+  var inputNamaSheet='login';
+  var action='loginOnlineStatus';
+  var req="https://script.google.com/macros/s/AKfycbyWlP-nviRkp2BMk7Yydfb_CeK-uh5sGJB0vR60WflSYHt1PUfg/exec?inputUrlSpreadSheet="+inputUrlSpreadSheet+"&inputNamaSheet="+inputNamaSheet+"&action="+action+"&username="+usernameStored+"&password="+passwordStored;
+  xhttp.open("GET", req, true);
+  xhttp.send();
+  }
+  
+  </script>
+  <p class="w3-center" id='loginOnline'></p>
+   <p class="w3-center" id="loginOnlineStatus"></p> 
+</div>
+  <div class="w3-center">  
+    <div class="w3-bar">
+      <button class="w3-bar-item w3-btn w3-green" type="submit" onclick="loginStore('username','usernameStored','password','passwordStored');">Simpan<i class="w3-margin-left fa fa-sign-in"></i></button>
+      <button class="w3-bar-item w3-btn w3-red" onclick="loginRemove('usernameStored','passwordStored')">Hapus<i class="w3-margin-left fa fa-sign-out"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id='scriptDiv'>
+<script> 
+//cek login
+loginOnline(localStorage.getItem('usernameStored'),localStorage.getItem('passwordStored'),'loginOnline');
+loginOnlineStatus(localStorage.getItem('usernameStored'),localStorage.getItem('passwordStored'),'loginOnlineStatus');
+hideAll();
+var speakingModalMustAnswer = document.getElementById('speakingModalMustAnswer');window.onclick = function(event) {if (event.target == speakingModalMustAnswer) {modal.style.display = "none";}}
+var loginModal = document.getElementById('loginModal');window.onclick = function(event) {if (event.target == loginModal) { modal.style.display = "none";}}
+var loginModalLogout = document.getElementById('loginModalLogout');window.onclick = function(event) {if (event.target == loginModalLogout) {modal.style.display = "none";}}
+</script>
+<script src="w3schools/lib/w3.js"></script>
+<script src="js/function.js"></script>
+<script src="js/data.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/writeTheory.js"></script>
+<script src="js/writeListening.js"></script>
+<script src="js/writeReading.js"></script>
+<script src="js/writeWriting.js"></script>
+<script src="js/writeUN.js"></script>
+<script src="js/speakingScript.js"></script>
+<script src="js/getScorePractice.js"></script>
+<script src="esl-games/scripts/jquery-1.7.2.min.js"></script>
+<script src="esl-games/scripts/jquery-ui-1.8.21.min.js"></script>
+<script src="esl-games/scripts/jquery.ui.touch-punch.js"></script>
+<script src="json/kd27JSON.json"></script>
+<script src="json/kd28JSON.json"></script>
+<script src="json/kd29JSON.json"></script>
+<script src="json/kd30JSON.json"></script>
+<script src="json/kd31JSON.json"></script>
+<script src="json/kd32JSON.json"></script>
+<script src="js/writeSpeaking.js"></script>
+
+
+<script src="js/writeTheory.js"></script>
+<script src="js/writeListening.js"></script>
+<script src="js/writeReading.js"></script>
+<script src="js/writeWriting.js"></script>
+<script src="js/writeUN.js"></script>
+
+<script src="js/speakingScript.js"></script>
+<script src="js/getScorePractice.js"></script>
+</div>
+</body>
+</html>
